@@ -1,0 +1,249 @@
+/* Global reset and styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #EDE0BF;
+    color: #ffffff;
+}
+
+/* Header and navigation */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color:#E5D19F;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+}
+
+header h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color:#333;
+    text-align:left;
+    margin-bottom: 10px;
+}
+
+nav {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: white;
+    
+}
+
+main {
+    padding-top: 80px; 
+    text-align: center;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.photo {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #333;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    animation: zoomIn 1.5s ease-out;
+}
+
+
+.intro {
+    margin-top: 50px;
+}
+
+.intro h2 {
+    font-size: 2.5em;
+    font-weight: 600;
+    color:#8B9489;
+    margin-bottom: 15px;
+}
+
+.intro h3 {
+    font-size: 1.8em;
+    color: #8B9489;
+    margin-bottom: 30px;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.intro p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    width: 80%;
+    margin: 0 auto;
+    color:#6C6D75;
+    max-width: 800px;
+}
+
+
+.social-media {
+        margin-top: 20px;
+        display: flex; 
+        justify-content: center; 
+        gap: 20px; 
+        animation: slideIn 1.5s ease-out 0.5s;
+}
+
+
+.social-icon {
+    font-size: 2em;
+    color:#333;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: white; 
+    animation: bounce 0.5s ease-in-out;
+}
+
+.social-icon i {
+    display: block;
+}
+
+.download-cv {
+    margin-top: 30px;
+    animation: fadeInUp 2s ease-out 1s;
+}
+
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    color: #fff;
+    background-color: #8B9489;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-download i {
+    margin-right: 10px; 
+}
+
+.btn-download:hover {
+    background-color: #333; 
+    transform: translateY(-2px); 
+}
+
+.btn-download:active {
+    background-color:#111; 
+    transform: translateY(0); 
+}
+
+
+@media (max-width: 768px) {
+    .btn-download {
+        font-size: 1em;
+        padding: 8px 15px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .social-icon {
+        font-size: 1.8em;
+    }
+}
+
+
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .intro h2 {
+        font-size: 2em;
+    }
+
+    .intro h3 {
+        font-size: 1.5em;
+    }
+}
